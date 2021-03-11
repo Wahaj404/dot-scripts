@@ -1,0 +1,29 @@
+#!/bin/bash
+
+resources=~/.scripts/resources
+
+function cfamily() {
+  mkdir $2
+  cp -r $resources/$1/.vscode $2
+  cp -r $resources/$1/.clang-format $2
+}
+
+case $1 in
+  c)
+    cfamily c $2
+    ;;
+  c++ | cpp)
+    cfamily cpp $2
+    ;;
+  js | javascript)
+    echo javascript
+    ;;
+  ts | typescript)
+    echo typescript
+    ;;
+  py | python)
+    echo python
+    ;;
+  *)
+    echo invalid
+esac

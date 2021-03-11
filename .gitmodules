@@ -1,0 +1,6 @@
+[submodule "resources/cpp"]
+	path = resources/cpp
+	url = https://github.com/Wahaj404/cpp-vscode
+[submodule "resources/c"]
+	path = resources/c
+	url = https://github.com/Wahaj404/c-vscode
