@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# appends command line arguments to the rc file of the current user's login shell
+
+case $SHELL in
+  /usr/bin/bash)
+    rc=~/.bashrc
+    ;;
+  /usr/bin/zsh)
+    rc=~/.zshrc
+    ;;
+  *)
+    echo unrecognized shell
+    exit
+esac
+
+echo $* >> $rc
