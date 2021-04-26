@@ -1,0 +1,3 @@
+#!/bin/bash
+
+append-rc alias $1=$2
