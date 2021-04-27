@@ -3,10 +3,10 @@
 # appends command line arguments to the rc file of the current user's login shell
 
 case $SHELL in
-  /usr/bin/bash)
+  /usr/bin/bash | /bin/bash)
     rc=~/.bashrc
     ;;
-  /usr/bin/zsh)
+  /usr/bin/zsh | /bin/zsh)
     rc=~/.zshrc
     ;;
   *)
